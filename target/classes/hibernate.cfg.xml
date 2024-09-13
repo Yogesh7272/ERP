@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/erp</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">123456789</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!--<property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>-->
+        
+        <!-- Ensure both entities are mapped -->
+        <mapping class="org.anudip.model.Employee"/>
+        <mapping class="org.anudip.model.Department"/>
+        <mapping class="org.anudip.model.Client"/>
+        <mapping class="org.anudip.model.Project"/>
+        <mapping class="org.anudip.model.Attendance"/>
+        <mapping class="org.anudip.model.Leave"/>
+        <mapping class="org.anudip.model.PerformanceReview"/>
+        <mapping class="org.anudip.model.Payroll"/>
+    </session-factory>
+</hibernate-configuration>
